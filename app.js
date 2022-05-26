@@ -1,5 +1,9 @@
 // import functions and grab DOM elements
+import { renderGoblin } from './'
+
 const form = document.querySelector('form');
+const goblinListEl = document.querySelector('goblins');
+
 
 // let state
 let playerHP = 10;
@@ -18,7 +22,7 @@ form.addEventListener('submit', (e) => {
         hp: Math.cell(Math.random() * 5),
     };
 
-    goblinName.push(newGoblin);
+    goblins .push(newGoblin);
     displayGoblins();
 
 });
@@ -27,7 +31,7 @@ function displayGoblins() {
     goblinListEl.textContent = '';
 
     for (let goblin of goblins) {
-        const goblinEl = renderGoblin(goblin);
+        const goblinEl = (goblin);
 
         goblinEl.addEventListener('click', () => {
             goblinClickHandler(goblin);
