@@ -7,14 +7,27 @@
 
 .eliminated-goblin {
     
-    justify-content: flex-start;
-    align-items: flex-start;
+    
     border: 6px solid red;
 }
 
 .player {
     border: 5px solid green;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-direction: column-reverse;
+    margin: 9em auto;
+}
+
+.goblin-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    border: 6px solid blue;
+    padding: 2%;
+    
+}
+
+.adventure-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
 }

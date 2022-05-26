@@ -20,33 +20,41 @@
     </header>
     <main>
         <div class="adventure-stats">
-            <div class="eliminated-goblin">
-                <p>You have defeated 
-                    <span id="defeated-number">0</span>
-                    goblins
-                </p>
-                <div class="eliminated-list"></div>
-
+            <div class="left">
+                <div class="eliminated-goblin">
+                    <p>You have defeated 
+                        <span id="defeated-number">0</span>
+                        goblins
+                    </p>
+                    <div class="eliminated-list"></div>
+    
+                </div>
+                <div class="player">
+                    <p>Your HP:
+                        <span id="player-hp">10</span>
+                    </p>
+                    <img id="player-img" src="./assets/ninja.jpg">
+                </div>
             </div>
-            <div class="player">
-                <p>Your HP:
-                    <span id="player-hp">10</span>
-                </p>
-                <img id="player-img" src="./assets/ninja.jpg">
-            </div>
-        </div>
-        <div class="goblin-stats">
-            <div>
-                <form>
-                    <input name="goblin-name">
-                    <button>Let's duel!</button>
-                </form>
-                <div class="goblins">
-                    <div class="goblin">
+            <div class="right">
+                <div>
+                    <form class="goblin-stats">
+                        <input name="goblin-name">
+                        <button>Let's duel!</button>
+                    </form>
+                    <div class="goblins">
+                        <div class="goblin">
+                            <p>Harry</p>
+                            <p id="goblin-face-1"></p>
+                            <p id="goblin-hp-1">1</p>
+                        </div>
+                        <div class="goblin">
+                            <p>Mike</p>
+                            <p id="goblin-face-1"></p>
+                            <p id="goblin-hp-1">5</p>
+                        </div>
 
                     </div>
-
-
                 </div>
             </div>
         </div>
