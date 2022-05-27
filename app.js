@@ -1,8 +1,8 @@
 // import functions and grab DOM elements
-import { renderGoblin } from './'
+import { renderGoblin } from './render-utils.js';
 
 const form = document.querySelector('form');
-const goblinListEl = document.querySelector('goblins');
+const goblinListEl = document.querySelector('.goblins');
 
 
 // let state
@@ -31,7 +31,7 @@ function displayGoblins() {
     goblinListEl.textContent = '';
 
     for (let goblin of goblins) {
-        const goblinEl = (goblin);
+        const goblinEl = renderGoblin(goblin);
 
         goblinEl.addEventListener('click', () => {
             goblinClickHandler(goblin);
