@@ -2,7 +2,7 @@
 import { renderGoblin } from './render-utils.js';
 
 
-
+const adventureHPEl = document.querySelector('player-hp');
 const defeatedNumberEl = document.querySelector('defeated-number');
 const form = document.querySelector('form');
 const goblinListEl = document.querySelector('.goblins');
@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
 
     const newGoblin = {
         name: goblinName,
-        hp: Math.cell(Math.random() * 5),
+        hp: Math.ceil(Math.random() * 5),
     };
 
     goblins .push(newGoblin);
@@ -50,8 +50,8 @@ function goblinClickHandler(goblin) {
 
     if (playerHP === 0) return;
 
-    const playerHit = math.random();
-    if (playerHit > .5) {
+    const playerHit = Math.random();
+    if (playerHit < 1) {
         goblin.hp--;
         displayGoblins();
 
@@ -59,7 +59,19 @@ function goblinClickHandler(goblin) {
 
         if (goblin.hp === 0){
             defeatedGoblinsCount++;
-        
+            defeatedNumberEl.textContent = defeatedGoblinsCount;
+        } else {
+            alert ('You missed!');
+        }
+        const goblinHit = Math.random();
+        if (goblinHit < 1){
+            playerHP--;
+            adventureHPEl.textContent = playerHP;
+            if (playerHP === 0) {
+                alert('Game Over :(');
+            } else {
+                alert(`${goblin.name} tried to hit you and missed`);
+            }
         }
 
     }
