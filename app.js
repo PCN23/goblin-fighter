@@ -1,6 +1,9 @@
 // import functions and grab DOM elements
 import { renderGoblin } from './render-utils.js';
 
+
+
+const defeatedNumberEl = document.querySelector('defeated-number');
 const form = document.querySelector('form');
 const goblinListEl = document.querySelector('.goblins');
 
@@ -42,3 +45,22 @@ function displayGoblins() {
 
 displayGoblins();
 
+function goblinClickHandler(goblin) {
+    if (goblin.hp === 0) return;
+
+    if (playerHP === 0) return;
+
+    const playerHit = math.random();
+    if (playerHit > .5) {
+        goblin.hp--;
+        displayGoblins();
+
+        alert(`You hit ${goblin.name}!`);
+
+        if (goblin.hp === 0){
+            defeatedGoblinsCount++;
+        
+        }
+
+    }
+}
